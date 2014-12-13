@@ -18,5 +18,6 @@ angular.module('elfSantaHolidayJs', ['ngAnimate', 'ngTouch', 'restangular', 'ui.
     $window.randomizeWind();
     $window.useTwinkleEffect = true;
     $window.useMeltEffect = true;
+    $window.flakesMaxActive = 96;
   })
 ;
