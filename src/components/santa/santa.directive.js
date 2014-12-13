@@ -1,5 +1,5 @@
 angular.module('elfSantaHolidayJs')
-  .directive('elf',function() {
+  .directive('santa',function() {
     return {
       restrict: 'E',
       templateUrl: 'components/santa/santa.html',
