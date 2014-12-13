@@ -7,7 +7,11 @@ angular.module('elfSantaHolidayJs')
         var positions = ["text-left","text-center","text-right"];
         scope.position = positions[2];
         $rootScope.$on("timeExpired", function() {
-          scope.position = Math.floor(Math.random() * (positions.length));
+          var newPosition = Math.floor(Math.random() * (positions.length));
+          while(scope.position == newPosition) {
+            newPosition = Math.floor(Math.random() * (positions.length));
+          }
+          scope.position = newPosition;
         });
       }
     };
