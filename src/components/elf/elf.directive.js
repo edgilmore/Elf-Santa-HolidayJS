@@ -28,7 +28,7 @@ angular.module('elfSantaHolidayJs')
       	$document.on('keydown',keyDownEvent);
         /*
       	scope.$destroy(function(){
-          $document.off(keyDownEvent)
+          $document.off(keyDownEvent);
         });
         */
       }
