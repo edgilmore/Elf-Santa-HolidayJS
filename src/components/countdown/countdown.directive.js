@@ -9,6 +9,7 @@ angular.module('elfSantaHolidayJs')
       link: function(scope,element,attrs){
        	scope.countdownCount = 60;
         scope.countClass = '';
+
           setInterval(function(){
              if (scope.countdownCount === 0) {
                scope.countdownCount = 60;
@@ -24,8 +25,6 @@ angular.module('elfSantaHolidayJs')
                scope.$digest();
              }
           }, 250);
-
-
       }
     };
   });
