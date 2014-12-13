@@ -8,7 +8,7 @@ angular.module('elfSantaHolidayJs')
 
       	$document.on('keydown',function(evt){
       		if(evt.which === 38){
-            console.log(element.animate({'bottom': '+=30px'},'slow'));
+            element.animate({'bottom': '+=30px'},'slow');
       			scope.$digest();
       		}
       	});

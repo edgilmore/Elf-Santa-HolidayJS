@@ -4,7 +4,6 @@ angular.module('elfSantaHolidayJs')
       restrict: 'E',
       templateUrl: 'components/santa/santa.html',
       link: function(scope, element, attrs){
-        console.log(element);
         var positions = ["text-left","text-center","text-right"];
         scope.position = positions[2];
         $rootScope.$on("timeExpired", function() {
