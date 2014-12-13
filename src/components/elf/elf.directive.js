@@ -2,7 +2,7 @@ angular.module('elfSantaHolidayJs')
   .directive('elf',function() {
     return {
       restrict: 'E',
-      templateUrl: '/elf.html',
+      templateUrl: 'components/elf/elf.html',
       link: function(){
 
       }
