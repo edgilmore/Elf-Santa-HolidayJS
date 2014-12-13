@@ -19,6 +19,11 @@ angular.module('elfSantaHolidayJs')
             element.animate({'left': '+=30px'},'fast');
             scope.$digest();
           }
+          if(evt.which === 40){
+          	scope.elfClass = 'bottom';
+            element.animate({'bottom': '-=30px'},'fast');
+            scope.$digest();
+          }
         };
       	$document.on('keydown',keyDownEvent);
         /*
