@@ -28,6 +28,7 @@
     <![endif]-->
 
     <div ui-view>
+      <div id="lights"></div>
       <elf></elf>
       <santa></santa>
     </div>
@@ -35,7 +36,10 @@
     <script>
       snowStorm.color = '#228B22';
       snowStorm.flakes = 96;
-      snowStorm.useTwinkleEffect = true
+      snowStorm.useTwinkleEffect = true;
+      snowStorm.freezeOnBlur = true;
+      snowStorm.snowStick = true;
+      snowStorm.randomizeWind();
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -57,13 +61,13 @@
     <script src="../bower_components/restangular/dist/restangular.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../bower_components/Snowstorm/snowstorm-min.js"></script>
+    <script src="../bower_components/Snowstorm/lights/christmaslights.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <script src="app/index.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
-
     <script src="components/elf/elf.directive.js"></script>
     <script src="components/santa/santa.directive.js"></script>
 
