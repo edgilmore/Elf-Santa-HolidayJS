@@ -16,7 +16,7 @@ angular.module('elfSantaHolidayJs')
           }
           if(evt.which === 39){
           	scope.elfClass = 'left';
-            element.animate({'right': '+=30px'},'fast');
+            element.animate({'left': '+=30px'},'fast');
             scope.$digest();
           }
         };
