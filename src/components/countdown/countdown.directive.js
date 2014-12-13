@@ -7,12 +7,12 @@ angular.module('elfSantaHolidayJs')
       scope: {},
       templateUrl: 'components/countdown/countdown.html',
       link: function(scope,element,attrs){
-       	scope.countdownCount = 60;
+       	scope.countdownCount = 10;
         scope.countClass = '';
 
          var countTimer = setInterval(function(){
              if (scope.countdownCount === 0) {
-               scope.countdownCount = 60;
+               scope.countdownCount = 10;
                scope.countClass = '';
                $rootScope.$broadcast('timeExpired');
              }
@@ -24,7 +24,7 @@ angular.module('elfSantaHolidayJs')
                }
                scope.$digest();
              }
-          }, 250);
+          }, 350);
           /*
           scope.$destroy(function (){
             $window.clearInterval(countTimer);
