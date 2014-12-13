@@ -1,5 +1,5 @@
 angular.module('elfSantaHolidayJs')
-  .directive('countdown',function($rootScope) {
+  .directive('countdown',function($rootScope, $window) {
     "use strict";
 
     return {
@@ -10,7 +10,7 @@ angular.module('elfSantaHolidayJs')
        	scope.countdownCount = 60;
         scope.countClass = '';
 
-          setInterval(function(){
+         var countTimer = setInterval(function(){
              if (scope.countdownCount === 0) {
                scope.countdownCount = 60;
                scope.countClass = '';
@@ -25,6 +25,10 @@ angular.module('elfSantaHolidayJs')
                scope.$digest();
              }
           }, 250);
+
+          scope.$destroy(function (){
+            $window.clearInterval(countTimer);
+          });
       }
     };
   });
