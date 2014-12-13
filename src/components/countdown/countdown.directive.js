@@ -25,10 +25,11 @@ angular.module('elfSantaHolidayJs')
                scope.$digest();
              }
           }, 250);
-
+          /*
           scope.$destroy(function (){
             $window.clearInterval(countTimer);
           });
+          */
       }
     };
   });
