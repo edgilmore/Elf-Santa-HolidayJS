@@ -3,8 +3,12 @@ angular.module('elfSantaHolidayJs')
     return {
       restrict: 'E',
       templateUrl: 'components/elf/elf.html',
-      link: function(){
+      link: function(scope,element,attrs){
+      	console.log(element);
+      	element.on("keydown",function(evt){
 
+      		while()
+      	});
       }
     };
   });
