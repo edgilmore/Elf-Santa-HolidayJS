@@ -5,7 +5,7 @@ angular.module('elfSantaHolidayJs')
       link: function(scope,element,attrs){
         var keyDownEvent = function(evt){
           if(evt.which === 38){
-            element.animate({'bottom': '+=30px'},'fast');            
+            element.animate({'bottom': '+=30px'},'fast');
             scope.elfClass = 'up';
             scope.$digest();
           }
@@ -21,9 +21,11 @@ angular.module('elfSantaHolidayJs')
           }
         };
       	$document.on('keydown',keyDownEvent);
+        /*
       	scope.$destroy(function(){
           $document.off(keyDownEvent)
         });
+        */
       }
     };
   });
