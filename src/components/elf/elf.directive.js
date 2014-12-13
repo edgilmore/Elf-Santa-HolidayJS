@@ -5,7 +5,18 @@ angular.module('elfSantaHolidayJs')
       link: function(scope,element,attrs){
         var keyDownEvent = function(evt){
           if(evt.which === 38){
-            element.animate({'bottom': '+=30px'},'fast');
+            element.animate({'bottom': '+=30px'},'fast');            
+            scope.elfClass = 'up';
+            scope.$digest();
+          }
+          if(evt.which === 37){
+            element.animate({'left': '-=30px'},'fast');
+            scope.elfClass = 'right';
+            scope.$digest();
+          }
+          if(evt.which === 39){
+          	scope.elfClass = 'left';
+            element.animate({'right': '+=30px'},'fast');
             scope.$digest();
           }
         };
