@@ -27,7 +27,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
+    <div ui-view>
+      <elf></elf>
+      <santa></santa>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -51,9 +54,6 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="snowstorm.js"></script>
-    <elf></elf>
-    <santa></santa>
-
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <script src="app/index.js"></script>
     <script src="app/main/main.controller.js"></script>
