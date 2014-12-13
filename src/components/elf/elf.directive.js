@@ -10,7 +10,9 @@ angular.module('elfSantaHolidayJs')
           }
         };
       	$document.on('keydown',keyDownEvent);
-      	scope.$destroy($document.off(keyDownEvent));
+      	scope.$destroy(function(){
+          $document.off(keyDownEvent)
+        });
       }
     };
   });
