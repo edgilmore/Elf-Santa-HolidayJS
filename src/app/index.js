@@ -10,5 +10,13 @@ angular.module('elfSantaHolidayJs', ['ngAnimate', 'ngTouch', 'restangular', 'ui.
       });
 
     $urlRouterProvider.otherwise('/');
+  }).run(function($window){
+    var snowStorm = $window.snowStorm;
+    snowStorm.snowColor = '#228B22';
+    snowStorm.flakes = 96;
+    snowStorm.useTwinkleEffect = true;
+    snowStorm.freezeOnBlur = true;
+    snowStorm.snowStick = true;
+    snowStorm.randomizeWind();
   })
 ;
