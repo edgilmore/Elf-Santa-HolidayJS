@@ -23,7 +23,7 @@ angular.module('elfSantaHolidayJs')
                }
                scope.$digest();
              }
-          }, 1000);
+          }, 250);
 
 
       }
