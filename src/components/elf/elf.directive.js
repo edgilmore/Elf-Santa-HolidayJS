@@ -10,21 +10,25 @@ angular.module('elfSantaHolidayJs')
             element.animate({'bottom': '+=30px'}, 100);
             scope.elfClass = 'up';
             scope.$digest();
+            checkCollisions();
           }
           if (evt.which === 37) {
             element.animate({'left': '-=30px'}, 100);
             scope.elfClass = 'right';
             scope.$digest();
+            checkCollisions();
           }
           if (evt.which === 39) {
             scope.elfClass = 'left';
             element.animate({'left': '+=30px'}, 100);
             scope.$digest();
+            checkCollisions();
           }
           if (evt.which === 40) {
             scope.elfClass = 'bottom';
             element.animate({'bottom': '-=30px'}, 100);
             scope.$digest();
+            checkCollisions();
           }
         };
         $document.on('keydown', keyDownEvent);
